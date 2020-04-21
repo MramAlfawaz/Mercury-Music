@@ -1,5 +1,5 @@
 body{
-    background-color: azure;
+    background-color: rgb(255, 255, 255);
 }
 
 .links {
@@ -9,7 +9,7 @@ body{
 }
 
 .links .link{
-    background-color: antiquewhite;
+    background-color: rgb(197, 201, 206);
     border-radius: 100px;
     height: 50px;
     width: 50px;

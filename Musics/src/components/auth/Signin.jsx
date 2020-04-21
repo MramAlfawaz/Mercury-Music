@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Form, Button, Col, Row } from "react-bootstrap";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+import "./signin.css";
+
 
 export const Signin = (props) => {
   const [signin, setSignin] = useState({});
@@ -44,7 +46,55 @@ console.log(props)
 
   return (
     <>
-      <Form className="mt-5">
+
+<div class="pen-title">
+  <h1>WELCOME BACK</h1>
+  <span class="small"> Mercury <i  class="small" class='fa fa-code'></i> by <a href='https://git.generalassemb.ly/Maram-Alfawaz/Mercury-Music'>Mercury Team</a></span>
+</div>
+
+<div class="container" >
+  
+  
+  <div class="card"></div>
+  <div class="card">
+    <h1 class="title">SIGN IN</h1>
+
+    <form >
+      
+      <div class="input-container">
+        <input    type="email"
+                  name="email"
+                  onChange={(e) => onChangeInput(e)} id="#{label}" required="required"/>
+        <label for="#{label}">EMAIL</label>
+        <div class="rerun"></div>
+        <div class="bar"></div>
+      </div>
+
+      <div class="input-container">
+        <input   type="password"
+                  name="password"
+                  onChange={(e) => onChangeInput(e)} id="#{label}" required="required"/>
+        <label for="#{label}">PASSWORD</label>
+        <div class="bar"></div>
+      </div>
+      
+      <div class="button-container">
+        <button
+              type="submit"
+              onClick={(e) => onSubmit(e)}><span>SIGN IN</span></button>
+      </div>
+      <div class="footer"><a
+              type="submit"
+              onClick={(e) => onChange(e)} href="/forgot">Forgot your password?</a></div>
+    </form>
+  </div>
+  <div class="card alt">
+    <div class="toggle" ><i class="music" class="fa fa-music" aria-hidden="true"></i></div>
+
+  </div>
+</div>
+
+      {/* <Form className="mt-5">
         <Row className="justify-content-center mt-5">
           <Col md={8}>
             <Form.Row>
@@ -86,7 +136,7 @@ console.log(props)
             </Button>
           </Col>
         </Row>
-      </Form>
+      </Form> */}
     </>
   );
 };

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Row, Form, Col, Button, Alert } from "react-bootstrap";
 import Axios from "axios";
+import "./up.css";
+
+ 
 
 export const Signup = (props) => {
   const [user, setUser] = useState({}); // user info
@@ -31,7 +34,79 @@ export const Signup = (props) => {
       {signup && (
         <Alert variant={"danger"}>THE EMAIL EXIST. PLEASE CHANGE THE EMAIL</Alert>
       )}
-      <Form className="mt-5">
+
+<div class="pen-title">
+  <h1>WELCOME BACK</h1>
+  <span class="small"> Mercury <i  class="small" class='fa fa-code'></i> by <a href='https://git.generalassemb.ly/Maram-Alfawaz/Mercury-Music'>Mercury Team</a></span>
+</div>
+
+<div class="container" >
+  
+  
+  <div class="card"></div>
+  <div class="card">
+    <h1 class="title">SIGN UP</h1>
+
+    <form >
+
+    <div class="input-container">
+        <input 
+        onChange={(e) => onChangeInput(e)}
+        name="firstName"
+        type="text" id="#{label}" required="required"/>
+        <label for="#{label}">FIRST NAME</label>
+        <div class="rerun"></div>
+        <div class="bar"></div>
+      </div>
+      
+      <div class="input-container">
+        <input
+        name="lastName"
+        onChange={(e) => onChangeInput(e)}
+        type="text" id="#{label}" required="required"/>
+        <label for="#{label}">LAST NAME</label>
+        <div class="rerun"></div>
+        <div class="bar"></div>
+        
+      </div>
+
+      <div class="input-container">
+        <input 
+        name="email"
+        onChange={(e) => onChangeInput(e)}
+        type="email" id="#{label}" required="required"/>
+        <label for="#{label}">EMAIL</label>
+        <div class="rerun"></div>
+        <div class="bar"></div>
+      </div>
+
+      <div class="input-container">
+        <input 
+        type="password"  
+        name="password"
+        onChange={(e) => onChangeInput(e)}
+        id="#{label}" required="required"/>
+        <label for="#{label}">PASSWORD</label>
+        <div class="bar"></div>
+      </div>
+      
+      <div class="button-container">
+        <button onClick={(e) => onSubmit(e)}><span>SIGN UP</span></button>
+      </div>
+      <div class="footer"> Already have account ? <span></span> 
+<a href="/signin" class="k"> SIGN IN</a></div>
+    </form>
+  </div>
+  <div class="card alt">
+    <div class="toggle" ><i class="music" class="fa fa-music" aria-hidden="true"></i></div>
+ 
+  </div>
+</div>
+
+
+
+
+      {/* <Form className="mt-5">
         <Row className="justify-content-center mt-5">
           <Col md={8}>
             <Form.Row>
@@ -51,14 +126,14 @@ export const Signup = (props) => {
                   onChange={(e) => onChangeInput(e)}
                 />
               </Col>
-              {/* <Col md={12}>
+              <Col md={12}>
                 <Form.Label>image</Form.Label>
                 <Form.Control
                   placeholder="image"
                   name="image"
                   onChange={(e) => onChangeInput(e)}
                 />
-              </Col> */}
+              </Col>
             </Form.Row>
             <Form.Row>
               <Col md={6}>
@@ -96,7 +171,7 @@ export const Signup = (props) => {
             </Col>
           </Col>
         </Row>
-      </Form>
+      </Form> */}
     </>
   );
 };

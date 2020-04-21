@@ -53,7 +53,9 @@ export default class DetailsAlbum extends Component {
                           
                     </div>   
                 </div>
-            </div>)
+            </div>
+            
+            )
      
 
     }

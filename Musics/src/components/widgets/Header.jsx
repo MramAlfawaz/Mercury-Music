@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Nav, Button } from "react-bootstrap";
-
 const Header = (props) => {
   console.log("Header", props);
   return (
@@ -9,8 +8,7 @@ const Header = (props) => {
     //     <Link className="navbar-brand" to="/">Mercury Music</Link>
     //     <Link className="nav-link" to="/favorites"><i className="fas fa-star"></i> Favoris</Link>
     // </nav>
-
-    <Nav className="navbar navbar-dark bg-dark mb-4" Style={"width: 100%"}>
+    <Nav className="navbar navbar-dark mb-4" Style={"width: 100%", "background-color:#ed2553"}>
       <Link className="navbar-brand" to="/">
         Mercury Music
       </Link>
