@@ -17,6 +17,18 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    city: {
+      type: String,
+      required: true,
+    },
+    country: {
+      type: String,
+      required: true,
+    },
+    faveArtist:{
+      type: String,
+      required: true,
+    },
     // image : String
     resetPasswordToken: String,
     resetPasswordExpires: Date,

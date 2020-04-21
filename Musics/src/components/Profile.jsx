@@ -1,11 +1,19 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import FavoritesAlbums from "./FavoritesAlbums";
 
-export default class Profile extends Component {
-    render() {
-        return (
-            <div>
-                Hi Bye
-            </div>
-        )
-    }
+class Profile extends Component {
+  render() {
+    let user = this.props.user;
+    return (
+      <div>
+        {/* <img src={user.image}></img> */}
+        <h2>{user.firstName, user.lastName}</h2>
+        <h3> l</h3>
+        <FavoritesAlbums/>
+
+      </div>
+
+    );
+  }
 }
+export default Profile;

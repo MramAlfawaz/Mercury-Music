@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Row, Form, Col, Button, Alert } from "react-bootstrap";
 import Axios from "axios";
+import Header from "../widgets/Header";
 
 export const Signup = (props) => {
   const [user, setUser] = useState({}); // user info
@@ -29,14 +30,14 @@ export const Signup = (props) => {
   return (
     <>
       {signup && (
-        <Alert variant={"danger"}>THE EMAIL EXIST. PLEASE CHANGE THE EMAIL</Alert>
+        <Alert variant={"danger"}>the email used . plz change the email</Alert>
       )}
       <Form className="mt-5">
         <Row className="justify-content-center mt-5">
           <Col md={8}>
             <Form.Row>
               <Col md={6}>
-                <Form.Label>FIRST NAME</Form.Label>
+                <Form.Label>First name</Form.Label>
                 <Form.Control
                   placeholder="First name"
                   name="firstName"
@@ -44,7 +45,7 @@ export const Signup = (props) => {
                 />
               </Col>
               <Col md={6}>
-                <Form.Label>LAST NAME</Form.Label>
+                <Form.Label>Last name</Form.Label>
                 <Form.Control
                   placeholder="Last name"
                   name="lastName"
@@ -63,7 +64,7 @@ export const Signup = (props) => {
             <Form.Row>
               <Col md={6}>
                 <Form.Group as={Col} controlId="formGridEmail">
-                  <Form.Label>EMAIL</Form.Label>
+                  <Form.Label>Email</Form.Label>
                   <Form.Control
                     type="email"
                     placeholder="Enter email"
@@ -75,7 +76,7 @@ export const Signup = (props) => {
 
               <Form.Group as={Col} controlId="formGridPassword">
                 <Col md={6}>
-                  <Form.Label>PASSWORD</Form.Label>
+                  <Form.Label>Password</Form.Label>
                   <Form.Control
                     type="password"
                     placeholder="Password"
@@ -91,7 +92,7 @@ export const Signup = (props) => {
                 type="submit"
                 onClick={(e) => onSubmit(e)}
               >
-                SIGN UP
+                Sign Up
               </Button>
             </Col>
           </Col>

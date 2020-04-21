@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Nav, Button } from "react-bootstrap";
 
 const Header = (props) => {
-  console.log("Header", props);
+    console.log("Header",props)
   return (
     // <nav className="navbar navbar-dark bg-danger mb-4">
     //     <Link className="navbar-brand" to="/">Mercury Music</Link>
@@ -33,9 +33,7 @@ const Header = (props) => {
         <Nav>
           {props.isSignin ? (
             <Button
-              onClick={() => {
-                props.isLogout();
-              }}
+              onClick={() => {props.isLogout()}}
               variant="outline-light"
             >
               LOG OUT

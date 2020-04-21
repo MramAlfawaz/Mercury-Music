@@ -60,7 +60,7 @@ router.post("/signin", (req, res) => {
           user.updatedAt = undefined;
 
           let payload = { user };
-          let token = jwt.sign(payload, "SECRET", { expiresIn: 1500 });
+          let token = jwt.sign(payload, "SECRET", { expiresIn: 36000000 });
           res.json({ token, signin: true });
           // if password is not correct
         } else {

@@ -26,6 +26,7 @@ export default class Home extends Component {
   addToFavorites = (album) => {
     let oldFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
     if (this.checkAlbum(oldFavorites, album)) {
+      localStorage.getItem("favorites").favorites.splice(album, 1);
       swal({
         title: "Album Exist",
         text: "Album already added to favorites",
