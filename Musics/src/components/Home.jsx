@@ -1,12 +1,12 @@
 import React, { Component } from "react";
+import Header from "./widgets/Header";
 import * as actions from "./action/index";
 import SearchBar from "./searchBar/SearchBar";
 import "./home.css";
-import { Link } from "react-router-dom";
+import { Link, Switch, Route } from "react-router-dom";
 import swal from "sweetalert";
 
 export default class Home extends Component {
- 
   state = {
     albums: [],
   };

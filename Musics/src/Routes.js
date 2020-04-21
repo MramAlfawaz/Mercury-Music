@@ -7,29 +7,28 @@ import { Signin } from "./components/auth/Signin";
 import { Signup } from "./components/auth/Signup";
 import Forgot from "./components/auth/Forgot";
 import Reset from "./components/auth/Reset";
+import Profile from "./components/Profile";
 import Header from "./components/widgets/Header";
 import jwt_decode from "jwt-decode";
 import Axios from "axios";
-
-
 export default class Routes extends Component {
-
   state = {
     user: null,
     isSignin: false,
   };
-
   componentDidMount() {
     this.userSignin();
   }
-
   userSignin = (signin) => {
+    console.log("inside");
+    console.log(!localStorage.token);
     if (!localStorage.token) {
       console.log("no token");
       Axios.post("http://localhost:8001/user/signin", signin)
         .then((res) => {
           if (res.data.token) {
             localStorage.setItem("token", res.data.token);
+            // let status = props.userSignin();
             let user = jwt_decode(res.data.token, "SECRET").user;
             console.log("user Signin", user);
             this.setState({
@@ -44,9 +43,13 @@ export default class Routes extends Component {
         })
         .catch((err) => console.log(err));
     }
- 
+    // else {
+    //   this.setState({
+    //     user: null,
+    //     isSignin: false,
+    //   });
+    // }
   };
-
   isLogout = () => {
     localStorage.removeItem("token");
     this.setState({
@@ -54,7 +57,6 @@ export default class Routes extends Component {
       isSignin: false,
     });
   };
-
   render() {
     console.log(this.state);
     return (
@@ -71,6 +73,7 @@ export default class Routes extends Component {
               <Signin {...props} userSignin={this.userSignin} />
             )}
           />
+          {/* <Route path="/signin" component={Signin} /> */}
           <Route path="/forgot" component={Forgot} />
           <Route
             exact
@@ -78,12 +81,13 @@ export default class Routes extends Component {
             render={(props) => <Reset {...props} />}
           />
           <Route path="/signup" component={Signup} />
+          {/* <Route path="/profile" component={Profile} /> */}
           <Route path="/" exact component={Home} />
           <Route path="/details/:id" exact component={DetailsAlbum} />
-
+          {/* <Route path="/favorites" exact component={FavoritesAlbums} /> */}
           {this.state.isSignin ? (
             <>
-              <Route exact path="/favorites" component={FavoritesAlbums} />
+              <Route exact path="/favorites" component={FavoritesAlbums} />{" "}
               <Route
                 path="/profile"
                 render={(Profile) => <Profile user={this.state.user} />}
