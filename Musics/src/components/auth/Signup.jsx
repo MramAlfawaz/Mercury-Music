@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Row, Form, Col, Button, Alert } from "react-bootstrap";
 import Axios from "axios";
-import Header from "../widgets/Header";
 
 export const Signup = (props) => {
   const [user, setUser] = useState({}); // user info
@@ -12,6 +11,7 @@ export const Signup = (props) => {
   };
   // to add the user info to database
   let onSubmit = (e) => {
+    console.log(user)
     e.preventDefault();
     Axios.post("http://localhost:8001/user/signup", user)
       .then((res) => {
@@ -52,14 +52,7 @@ export const Signup = (props) => {
                   onChange={(e) => onChangeInput(e)}
                 />
               </Col>
-              {/* <Col md={12}>
-                <Form.Label>image</Form.Label>
-                <Form.Control
-                  placeholder="image"
-                  name="image"
-                  onChange={(e) => onChangeInput(e)}
-                />
-              </Col> */}
+              
             </Form.Row>
             <Form.Row>
               <Col md={6}>
@@ -85,6 +78,30 @@ export const Signup = (props) => {
                   />
                 </Col>
               </Form.Group>
+              <Col md={6}>
+                <Form.Label>City</Form.Label>
+                <Form.Control
+                  placeholder="City"
+                  name="city"
+                  onChange={(e) => onChangeInput(e)}
+                />
+              </Col>
+              <Col md={6}>
+                <Form.Label>Country</Form.Label>
+                <Form.Control
+                  placeholder="country"
+                  name="country"
+                  onChange={(e) => onChangeInput(e)}
+                />
+              </Col>
+              <Col md={6}>
+                <Form.Label>Favorite Artist</Form.Label>
+                <Form.Control
+                  placeholder="Favorite Artist"
+                  name="faveArtist"
+                  onChange={(e) => onChangeInput(e)}
+                />
+              </Col>
             </Form.Row>
             <Col md={10}>
               <Button

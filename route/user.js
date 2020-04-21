@@ -20,7 +20,9 @@ router.post("/signup", (req, res) => {
     lastName: req.body.lastName,
     email: req.body.email,
     password: req.body.password,
-    image: req.body.image,
+    city: req.body.city,
+    country: req.body.country,
+    faveArtist: req.body.faveArtist,
   };
   // res.send(newUser)
   User.findOne({ email: newUser.email })
@@ -40,6 +42,7 @@ router.post("/signup", (req, res) => {
     })
     .catch((err) => res.json(err));
 });
+
 router.post("/signin", (req, res) => {
   const signinUser = {
     email: req.body.email,
@@ -52,13 +55,6 @@ router.post("/signin", (req, res) => {
       if (user) {
         // if password is correct
         if (bcrypt.compareSync(signinUser.password, user.password)) {
-          user.password = undefined;
-          user.email = undefined;
-          user.firstName = undefined;
-          user.lastName = undefined;
-          user.createdAt = undefined;
-          user.updatedAt = undefined;
-
           let payload = { user };
           let token = jwt.sign(payload, "SECRET", { expiresIn: 36000000 });
           res.json({ token, signin: true });

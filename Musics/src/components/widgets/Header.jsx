@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Nav, Button } from "react-bootstrap";
 
 const Header = (props) => {
-    console.log("Header",props)
+  console.log("Header", props);
   return (
     // <nav className="navbar navbar-dark bg-danger mb-4">
     //     <Link className="navbar-brand" to="/">Mercury Music</Link>
@@ -11,16 +11,13 @@ const Header = (props) => {
     // </nav>
 
     <Nav className="navbar navbar-dark bg-dark mb-4" Style={"width: 100%"}>
-      <Link className="navbar-brand" to="/">
+      <Link className="navbar-brand" to="#">
         Mercury Music
       </Link>
-      <Link className="navbar-brand" to="/favorites">
-        <i className="fas fa-star"></i> Favorites
-      </Link>
-      <Link className="navbar-brand" to="/songs">
-        SONGS
-      </Link>
-      <Link className="navbar-brand" to="/albums">
+      {/* <Link className="navbar-brand" to="/favorites">
+        <i className="fas fa-star"></i> FAVORITES
+      </Link> */}
+      <Link className="navbar-brand" to="/">
         ALBUMS
       </Link>
       <Link className="navbar-brand" to="/profile">
@@ -33,7 +30,11 @@ const Header = (props) => {
         <Nav>
           {props.isSignin ? (
             <Button
-              onClick={() => {props.isLogout()}}
+              onClick={() => {
+                props.isLogout();
+                localStorage.removeItem("token");
+                props.funcUser();
+              }}
               variant="outline-light"
             >
               LOG OUT
