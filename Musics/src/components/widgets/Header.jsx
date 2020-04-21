@@ -11,16 +11,13 @@ const Header = (props) => {
     // </nav>
 
     <Nav className="navbar navbar-dark bg-dark mb-4" Style={"width: 100%"}>
-      <Link className="navbar-brand" to="/">
+      <Link className="navbar-brand" to="#">
         Mercury Music
       </Link>
-      <Link className="navbar-brand" to="/favorites">
-        <i className="fas fa-star"></i> Favorites
-      </Link>
-      <Link className="navbar-brand" to="/songs">
-        SONGS
-      </Link>
-      <Link className="navbar-brand" to="/albums">
+      {/* <Link className="navbar-brand" to="/favorites">
+        <i className="fas fa-star"></i> FAVORITES
+      </Link> */}
+      <Link className="navbar-brand" to="/">
         ALBUMS
       </Link>
       <Link className="navbar-brand" to="/profile">
@@ -35,6 +32,8 @@ const Header = (props) => {
             <Button
               onClick={() => {
                 props.isLogout();
+                localStorage.removeItem("token");
+                props.funcUser();
               }}
               variant="outline-light"
             >

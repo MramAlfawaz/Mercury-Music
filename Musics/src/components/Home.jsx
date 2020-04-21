@@ -3,7 +3,7 @@ import Header from "./widgets/Header";
 import * as actions from "./action/index";
 import SearchBar from "./searchBar/SearchBar";
 import "./home.css";
-import { Link, Switch, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import swal from "sweetalert";
 
 export default class Home extends Component {
@@ -25,7 +25,17 @@ export default class Home extends Component {
 
   addToFavorites = (album) => {
     let oldFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
     if (this.checkAlbum(oldFavorites, album)) {
+      let favorites = localStorage.favorites;
+      // favorites.splice(album, 1);
+      let Favorite = JSON.parse(favorites)
+      console.log(Favorite)
+      Favorite.splice(album, 1);
+      console.log(Favorite)
+      localStorage.removeItem("favorites");
+      localStorage.setItem("favorites", JSON.stringify(Favorite));
+
       swal({
         title: "Album Exist",
         text: "Album already added to favorites",
@@ -33,15 +43,16 @@ export default class Home extends Component {
       });
 
       return false;
+    } else {
+      oldFavorites.push(album);
+      let favorites = oldFavorites;
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      swal({
+        title: "Album Added",
+        text: "Album added to favorites",
+        icon: "success",
+      });
     }
-    oldFavorites.push(album);
-    let favorites = oldFavorites;
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-    swal({
-      title: "Album Added",
-      text: "Album added to favorites",
-      icon: "success",
-    });
   };
 
   checkAlbum = (albums, album) => {

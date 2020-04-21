@@ -20,7 +20,6 @@ export function getAlbum(id){
     .then(response => response.data)
     .catch(error => console.log(error));
 return album;
-
 }
 
 export function getFavoriteAlbums(){

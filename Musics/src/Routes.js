@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "./components/Home";
 import DetailsAlbum from "./components/DetailsAlbum";
-import FavoritesAlbums from "./components/FavoritesAlbums";
 import { Signin } from "./components/auth/Signin";
 import { Signup } from "./components/auth/Signup";
 import Forgot from "./components/auth/Forgot";
@@ -15,10 +14,24 @@ export default class Routes extends Component {
   state = {
     user: null,
     isSignin: false,
+
   };
+
+  funcUser = () => {
+    console.log(localStorage.token);
+    if (localStorage.token) {
+      let user = jwt_decode(localStorage.token);
+      console.log(user.user);
+      this.setState({ user: user.user, isSignin: true });
+    } else {
+      this.setState({ user: null , isSignin: false});
+    }
+  };
+
   componentDidMount() {
-    this.userSignin();
+    this.funcUser();
   }
+
   userSignin = (signin) => {
     console.log("inside");
     console.log(!localStorage.token);
@@ -65,6 +78,7 @@ export default class Routes extends Component {
           isSignin={this.state.isSignin}
           userSignin={this.userSignin}
           isLogout={this.isLogout}
+          funcUser={this.funcUser}
         />
         <Switch>
           <Route
@@ -81,16 +95,14 @@ export default class Routes extends Component {
             render={(props) => <Reset {...props} />}
           />
           <Route path="/signup" component={Signup} />
-          {/* <Route path="/profile" component={Profile} /> */}
           <Route path="/" exact component={Home} />
           <Route path="/details/:id" exact component={DetailsAlbum} />
           {/* <Route path="/favorites" exact component={FavoritesAlbums} /> */}
           {this.state.isSignin ? (
             <>
-              <Route exact path="/favorites" component={FavoritesAlbums} />{" "}
               <Route
                 path="/profile"
-                render={(Profile) => <Profile user={this.state.user} />}
+                render={() => <Profile user={this.state.user} />}
               />
             </>
           ) : (
