@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import FavoritesAlbums from "./FavoritesAlbums";
 import "./profile.css";
+import maram from './images/logo.png'
 export default class Profile extends Component {
 
   render() {
@@ -16,7 +17,7 @@ export default class Profile extends Component {
             </div>
             <div class="half">
                 <div class="profile">
-                    <img src="https://s4.aconvert.com/convert/p3r68-cdx67/adx57-l0ejc.png" alt="profile-photo"/>
+                    <img src={maram} alt="profile-photo"/>
                 </div>
                 <div class="user-info">
                     <h1 class="h4p">{user.firstName} {user.lastName}</h1>

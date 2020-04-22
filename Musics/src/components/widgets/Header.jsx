@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Nav, Button } from "react-bootstrap";
+
 const Header = (props) => {
   console.log("Header", props);
   return (
@@ -8,7 +9,8 @@ const Header = (props) => {
     <Nav className="navbar navbar-dark mb-4" Style={"background: #DD17F" } >
       <Link className="navbar-brand" to="/">
       <div>
-                    <img width="100" height="100" src="" alt="profile-photo"/>
+      <i class='fas fa-headphones' Style={'font-size:36px'}></i>
+
                 </div>
        
       </Link>

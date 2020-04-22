@@ -20,6 +20,7 @@ export default class SearchBar extends Component {
         
         console.log(this.state);
         return (
+
             <div className="search mb-2">
                 <form onSubmit={(e) => this.submitSearch(e)}>
                     <div className="row">

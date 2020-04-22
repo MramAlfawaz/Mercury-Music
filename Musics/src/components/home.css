@@ -27,7 +27,7 @@ html, body {
     -webkit-box-align: center;
             align-items: center;
     color: #333;
-    font-family: "Roboto",sans-serif;
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
     font-size: 1em;
     -webkit-font-smoothing: antialiased;
     line-height: 1em;
@@ -187,7 +187,7 @@ html, body {
   }
   .player .music .song-1 .info .titles h5, .player .music .song-2 .info .titles h5, .player .music .song-3 .info .titles h5, .player .music .song-4 .info .titles h5 {
     font-size: 17px;
-    font-family: monospace;
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
     font-weight: 400;
     margin-bottom: 7px;
   }
@@ -291,21 +291,23 @@ html, body {
   .music-card-d > .info-d > .title-d {
     font-size: 25px;
     font-weight: bold;
-    font-family: monospace;
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
     color: #ed2553;
     margin-bottom: 8px;
   }
    .text-primary-d{
     font-size: 15px;
     font-weight: 400;
-    font-family: monospace;
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
     color: #333;
     margin-bottom: 8px;
    }
   .music-card-d > .info-d > .artist {
-    font-family: 'Source sans pro';
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
     color: #cfcfcf;
     font-size: 20px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
+
+ 

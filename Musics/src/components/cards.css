@@ -92,20 +92,20 @@
   .music-card > .info > .title {
     font-size: 20px;
     font-weight: bold;
-    font-family: monospace;
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
     color: rgb(211, 204, 203);
     margin-bottom: 8px;
   }
   
    .text-primary{
     font-size: 10px;
-    font-family: monospace;
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
     color: #333;
     margin-bottom: 8px;
    }
 
   .music-card > .info > .artist {
-    font-family: 'Source sans pro';
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
     color: #cfcfcf;
     font-size: 20px;
     letter-spacing: 0.08em;
