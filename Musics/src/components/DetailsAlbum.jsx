@@ -39,20 +39,24 @@ export default class DetailsAlbum extends Component {
     renderAlbum = () => {
         const {album} = this.state;
         return  (
-            <div className="col md-12 mb-3">
-                <div className="card border-dark">
-                    <img src={album.cover_big} alt="" className="card-img-top"/>
-                    <div className="card-body">
-                    <span className="text-primary">{album.release_date} </span>
-                            <div className="card-title">
-                                            {album.title}
-                            </div>
-                    </div>
-                    <div className="card-footer">
-                        {this.renderTracks()}
-                          
-                    </div>   
+            <div className="col md-4 mb-2">
+            <div class='music-card'>
+              <div class='image'>
+                <img src={album.cover_big} />
+              </div>
+              <div class='wave'></div>
+              <div class='wave'></div>
+              <div class='wave'></div>
+              <div class='info'>
+                <h2 class='title'>{album.title}</h2>
+                <span className="text-primary">{album.release_date} </span> 
                 </div>
+
+            </div>
+
+            <div className="card-footer">
+                        {this.renderTracks()}
+                    </div> 
             </div>
             
             )
@@ -69,7 +73,6 @@ export default class DetailsAlbum extends Component {
                     <div className="col-md-10 mx-auto">
                         <div className="row">
                             {this.renderAlbum()}
-                            
                         </div>
                     </div>
                 </div>

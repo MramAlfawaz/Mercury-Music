@@ -28,33 +28,46 @@ export default class Forgot extends Component {
   render() {
     console.log(this.props.history.location);
     return (
+      
+      <>
+      <div class="pen-title">
+  <h1>WELCOME BACK</h1>
+  <span class="small"> Mercury Music <i  class="small" class='fa fa-code'></i> by <a href='https://git.generalassemb.ly/Maram-Alfawaz/Mercury-Music'>Mercury Team</a></span>
+</div>
 
-      <Row className="justify-content-center mt-5">
-        <Col md={8}>
-          <legend>Forgot Password</legend>
-          <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label for="email">Email</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter your email"
+<div class="containerSI" >
+  
+  <div class="card"></div>
+  <div class="card">
+    <h1 class="title">RESET PASSWORD</h1>
+
+    <form >
+      
+      <div class="input-container">
+        <input type="text"
               name="email"
               required
               autofocus
               onChange={this.change}
-            />
-          </Form.Group>
-          <Form.Group>
-            <Button
-              class="btn btn-primary"
-              value="Reset Password"
-              onClick={(e) => this.Submit(e)}>
+               required id="#{label}" required="required"/>
+        <label for="#{label}">Enter Your Email</label>
+        <div class="rerun"></div>
+        <div class="bar"></div>
+      </div>
+      
+      <div class="button-container">
+        <button value="Reset Password"
+              onClick={(e) => this.Submit(e)}><span> RESET </span></button>
+      </div>
+      <div class="footer"><a href="/signin">BACK TO SIGN IN PAGE</a></div>
+    </form>
+  </div>
+  <div class="card alt">
+    <div class="toggle" ><i class="music" class="fa fa-music" aria-hidden="true"></i></div>
 
-              SUBMIT
-
-            </Button>
-          </Form.Group>
-        </Col>
-      </Row>
+  </div>
+</div>
+</>
     );
   }
 }

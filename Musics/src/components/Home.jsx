@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Header from "./widgets/Header";
 import * as actions from "./action/index";
 import SearchBar from "./searchBar/SearchBar";
+import {Container, Col ,Row} from 'react-bootstrap'
 import "./home.css";
-import { Link, Switch, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import swal from "sweetalert";
 export default class Home extends Component {
   state = {
@@ -21,21 +22,32 @@ export default class Home extends Component {
   };
   addToFavorites = (album) => {
     let oldFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
     if (this.checkAlbum(oldFavorites, album)) {
-      // localStorage.getItem("favorites").favorites.splice(album, 1);
+      let favorites = localStorage.favorites;
+      // favorites.splice(album, 1);
+      let Favorite = JSON.parse(favorites)
+      console.log(Favorite)
+      Favorite.splice(album, 1);
+      console.log(Favorite)
+      localStorage.removeItem("favorites");
+      localStorage.setItem("favorites", JSON.stringify(Favorite));
+
       swal({
         title: "Album Already Exist",
         icon: "warning",
       });
       return false;
+    } else {
+      oldFavorites.push(album);
+      let favorites = oldFavorites;
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      swal({
+        title: "Album Added",
+        text: "Album added to favorites",
+        icon: "success",
+      });
     }
-    oldFavorites.push(album);
-    let favorites = oldFavorites;
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-    swal({
-      title: "Album Added",
-      icon: "success",
-    });
   };
   checkAlbum = (albums, album) => {
     let found = albums.some(function (item) {
@@ -43,19 +55,24 @@ export default class Home extends Component {
     });
     return found;
   };
+
   renderAlbums = () => {
     const { albums } = this.state;
     return albums && albums.length
       ? albums.map((item, index) => (
-
-          <div key={index} className="col md-4 mb-2">
-             <div className="card border-dark">
-              <img src={item.album.cover_big} alt="" className="card-img-top" />
-              <div className="card-body">
-                <span className="text-primary">{item.artist.name} </span>
-                <div className="card-title">{item.title}</div>
+        
+        <div class="row">
+        <div class="col-sm-6" >
+            <div class="music-card">
+              <div class="image">
+                <img src={item.album.cover_big} />
               </div>
-              <div className="card-footer">
+              <div class="wave"></div>
+              <div class="wave"></div>
+              <div class="wave"></div>
+              <div class="info">
+                <h2 class="title">{item.title}</h2>
+                <author class="artist">{item.artist.name} </author>
                 <div className="links">
                   <Link to={`/details/${item.album.id}`} className="link">
                     <i className="fas fa-info-circle text-dark"></i>
@@ -65,22 +82,25 @@ export default class Home extends Component {
                     href="#"
                     className="link"
                   >
-                    <i className="fas fa-grin-stars text-dark" aria-hidden="true"></i>
-
+                    <i
+                      className="fas fa-grin-stars text-dark"
+                      aria-hidden="true"
+                    ></i>
                   </a>
                 </div>
               </div>
             </div>
-
-          </div>
+      </div>
+      </div>
+                    
         ))
       : null;
   };
   render() {
     console.log(this.state);
     return (
-      <div className="container">
-        <div class="row mt-4">
+      <div >
+        <div >
           <div className="col-md-10 mx-auto">
             <SearchBar searchAlbums={this.searchAlbums} />
             <div className="row">{this.renderAlbums()}</div>

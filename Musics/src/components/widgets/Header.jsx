@@ -4,35 +4,27 @@ import { Nav, Button } from "react-bootstrap";
 const Header = (props) => {
   console.log("Header", props);
   return (
-    // <nav className="navbar navbar-dark bg-danger mb-4">
-    //     <Link className="navbar-brand" to="/">Mercury Music</Link>
-    //     <Link className="nav-link" to="/favorites"><i className="fas fa-star"></i> Favoris</Link>
-    // </nav>
-    <Nav className="navbar navbar-dark mb-4" Style={"width: 100%", "background-color:#ed2553"}>
+ <div Style={"height:600"}>
+    <Nav className="navbar navbar-dark mb-4" >
       <Link className="navbar-brand" to="/">
         Mercury Music
       </Link>
-      <Link className="navbar-brand" to="/favorites">
-        <i className="fas fa-star"></i> Favorites
-      </Link>
-      <Link className="navbar-brand" to="/songs">
-        SONGS
-      </Link>
-      <Link className="navbar-brand" to="/albums">
-        ALBUMS
+     
+      <Link className="navbar-brand" to="/">
+       ALL MUSICS
       </Link>
       <Link className="navbar-brand" to="/profile">
         PROFILE
       </Link>
       <Nav>
-        {/* <Nav.Link as={Link} to="/profile">
-          Profile
-        </Nav.Link> */}
+  
         <Nav>
           {props.isSignin ? (
             <Button
               onClick={() => {
                 props.isLogout();
+                localStorage.removeItem("token");
+                props.funcUser();
               }}
               variant="outline-light"
             >
@@ -56,6 +48,7 @@ const Header = (props) => {
         </Nav>
       </Nav>
     </Nav>
+    </div>
   );
 };
 export default Header;

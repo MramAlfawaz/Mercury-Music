@@ -39,31 +39,45 @@ class Reset extends Component {
   render() {
     console.log(this.state.password);
     return (
-      <Row className="justify-content-center mt-5">
-        <Col md={8}>
-          <legend>Reset Password </legend>
-          <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label for="password">New Password</Form.Label>
-            <Form.Control
-              type="password"
-              name="password"
-              placeholder="New password"
-              onChange={(e) => this.change(e)}
-              autofocus="autofocus"
-              required
-            />
-          </Form.Group>
-          <Form.Group>
-            <Button
-              class="btn btn-primary"
-              value="Reset Password"
-              onClick={(e) => this.Submit(e)}
-            >
-              RESET PASSWORD
-            </Button>
-          </Form.Group>
-        </Col>
-      </Row>
+      <>
+      <div class="pen-title">
+  <h1></h1>
+  <span class="small"> Mercury Music <i  class="small" class='fa fa-code'></i> by <a href='https://git.generalassemb.ly/Maram-Alfawaz/Mercury-Music'>Mercury Team</a></span>
+</div>
+
+<div class="containerSI" >
+  
+  <div class="card"></div>
+  <div class="card">
+    <h1 class="title">NEW PADDWORD</h1>
+
+    <form >
+      
+      <div class="input-container">
+        <input type="password"
+               name="password"
+               onChange={(e) => this.change(e)}
+               autofocus="autofocus"
+               required id="#{label}" required="required"/>
+        <label for="#{label}"> PASSWORD</label>
+        <div class="rerun"></div>
+        <div class="bar"></div>
+      </div>
+      
+      <div class="button-container">
+        <button value="Reset Password"
+                onClick={(e) => this.Submit(e)}><span>UPDATE</span></button>
+      </div>
+      <div class="footer"><a href="/signin">BACK TO SIGN IN PAGE</a></div>
+    </form>
+  </div>
+  <div class="card alt">
+    <div class="toggle" ><i class="music" class="fa fa-music" aria-hidden="true"></i></div>
+
+  </div>
+</div>
+</>
+     
     );
   }
 }

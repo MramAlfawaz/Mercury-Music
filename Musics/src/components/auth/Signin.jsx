@@ -49,10 +49,10 @@ console.log(props)
 
 <div class="pen-title">
   <h1>WELCOME BACK</h1>
-  <span class="small"> Mercury <i  class="small" class='fa fa-code'></i> by <a href='https://git.generalassemb.ly/Maram-Alfawaz/Mercury-Music'>Mercury Team</a></span>
+  <span class="small"> Mercury Music <i  class="small" class='fa fa-code'></i> by <a href='https://git.generalassemb.ly/Maram-Alfawaz/Mercury-Music'>Mercury Team</a></span>
 </div>
 
-<div class="container" >
+<div class="containerSI" >
   
   
   <div class="card"></div>
@@ -93,50 +93,6 @@ console.log(props)
 
   </div>
 </div>
-
-      {/* <Form className="mt-5">
-        <Row className="justify-content-center mt-5">
-          <Col md={8}>
-            <Form.Row>
-              <Form.Group as={Col} controlId="formGridEmail">
-                <Form.Label>Email</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="Enter email"
-                  name="email"
-                  onChange={(e) => onChangeInput(e)}
-                />
-              </Form.Group>
-
-              <Form.Group as={Col} controlId="formGridPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  type="password"
-                  placeholder="Password"
-                  name="password"
-                  onChange={(e) => onChangeInput(e)}
-                />
-              </Form.Group>
-            </Form.Row>
-            <Button
-              variant="primary"
-              type="submit"
-              onClick={(e) => onSubmit(e)}
-            >
-              SIGN IN
-            </Button>
-            <Button
-              as={Link}
-              to={"/forgot"}
-              variant="primary"
-              type="submit"
-              onClick={(e) => onChange(e)}
-            >
-              FORGOT PASSWORD?
-            </Button>
-          </Col>
-        </Row>
-      </Form> */}
     </>
   );
 };
