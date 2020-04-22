@@ -26,7 +26,7 @@ export default class SearchBar extends Component {
                         <div className="col-md-10">
                             <div className="form-group">
                                 <input type="text" 
-                                placeholder="Search for favorite tracks" 
+                                placeholder="Search for your favorite tracks" 
                                 className="form-control p-4" 
                                 value={this.state.term}
                                 onChange={(e)=> this.handleInputSearch(e)} />

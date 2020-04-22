@@ -5,9 +5,12 @@ const Header = (props) => {
   console.log("Header", props);
   return (
  <div Style={"height:600"}>
-    <Nav className="navbar navbar-dark mb-4" >
+    <Nav className="navbar navbar-dark mb-4" Style={"background: #08182d"} >
       <Link className="navbar-brand" to="/">
-        Mercury Music
+      <div class="card alt" className="ml-0">
+        <div class="toggle" className="ml-0" ><i class="music" class="fa fa-music" aria-hidden="true"> </i> Mercury </div>
+      </div>
+       
       </Link>
      
       <Link className="navbar-brand" to="/">

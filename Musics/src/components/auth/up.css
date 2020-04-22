@@ -1,6 +1,11 @@
 body {
     background: #0a183d;
-    color: #ed2553;
+    /* background-color: #F44336; */
+    /* background-image: url('https://images.pexels.com/photos/242236/pexels-photo-242236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); */
+    background-size: cover;
+
+
+    color: #ffffff;
     font-family: 'RobotoDraft', 'Roboto', sans-serif;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;

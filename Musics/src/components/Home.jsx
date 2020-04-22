@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import Header from "./widgets/Header";
 import * as actions from "./action/index";
 import SearchBar from "./searchBar/SearchBar";
-import {Container, Col ,Row} from 'react-bootstrap'
 import "./home.css";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
@@ -70,6 +68,8 @@ export default class Home extends Component {
               <div class="wave"></div>
               <div class="wave"></div>
               <div class="wave"></div>
+
+
               <div class="info">
                 <h2 class="title">{item.title}</h2>
                 <author class="artist">{item.artist.name} </author>

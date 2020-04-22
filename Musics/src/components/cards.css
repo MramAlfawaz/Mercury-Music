@@ -22,16 +22,17 @@
   .music-card { 
       
       margin-top: 70px; 
-      margin-right: 50px;
-      margin-left: 60px;
+      margin-right: 20px;
+      margin-left: 30px;
       align-content: center;
     border-radius: 6px;
     background: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
     overflow: hidden;
     position: relative;
-    width: 300px;
+    width: 350px;
     height: 500px;
+    background-origin: inherit;
   }
   .music-card > .image img {
       
@@ -39,7 +40,7 @@
     z-index: 1;
     opacity: 0.3;
     height: 300px;
-    width: 300px;
+    width: 350px;
   }
   .music-card > .image:after {
       
@@ -50,7 +51,8 @@
     width: 100%;
     z-index: 1;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(221, 65, 127, 0)), to(#DD417F));
-    background: linear-gradient(rgba(221, 65, 127, 0), #DD417F);
+    background: linear-gradient(rgba(221, 65, 127, 0), rgb(58, 57, 57));
+    /* #DD417F */
   }
   .music-card > .wave {
       
@@ -62,6 +64,8 @@
     margin-top: -130%;
     border-radius: 40%;
     background: radial-gradient(#B01DE8, #F34235);
+     /* F44336 */
+    /* background: radial-gradient(rgb(34, 15, 0), rgb(97, 87, 86)); */
     -webkit-animation: spin 3000ms infinite linear;
             animation: spin 3000ms infinite linear;
   }
@@ -70,11 +74,13 @@
     -webkit-animation: spin 4000ms infinite linear;
             animation: spin 4000ms infinite linear;
   }
+
   .music-card > .wave:nth-child(3) {
     top: 10px;
     -webkit-animation: spin 5000ms infinite linear;
             animation: spin 5000ms infinite linear;
   }
+  
   .music-card > .info {
       
     position: absolute;
@@ -84,12 +90,20 @@
     text-align: center;
   }
   .music-card > .info > .title {
-    font-size: 30px;
-    font-weight: 400;
-    font-family: 'Playfair display';
-    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
+    color: rgb(211, 204, 203);
     margin-bottom: 8px;
   }
+  
+   .text-primary{
+    font-size: 10px;
+    font-family: monospace;
+    color: #333;
+    margin-bottom: 8px;
+   }
+
   .music-card > .info > .artist {
     font-family: 'Source sans pro';
     color: #cfcfcf;
