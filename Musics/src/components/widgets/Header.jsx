@@ -8,7 +8,7 @@ const Header = (props) => {
     <Nav className="navbar navbar-dark mb-4" Style={"background: #DD17F" } >
       <Link className="navbar-brand" to="/">
       <div>
-                    <img width="100" height="100" src="https://s4.aconvert.com/convert/p3r68-cdx67/avz3e-bhvbv.png" alt="profile-photo"/>
+                    <img width="100" height="100" src="" alt="profile-photo"/>
                 </div>
        
       </Link>

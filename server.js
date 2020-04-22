@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
 mongoose
-  .connect("mongodb://localhost/auth", {
+  .connect("mongodb+srv://sigma:202020@cluster0-vexsd.mongodb.net/test?retryWrites=true&w=majority", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })

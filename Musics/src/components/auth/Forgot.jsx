@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Form, Button, Col, Row } from "react-bootstrap";
 import Axios from "axios";
+import swal from "sweetalert";
+
 
 
 export default class Forgot extends Component {
@@ -14,6 +16,10 @@ export default class Forgot extends Component {
     })
       .then((res) => {
         console.log(res);
+        swal({
+          title: "EMAIL SENT",
+          icon: "success",
+        });
       })
       .catch((err) => {
         console.log(err.response);

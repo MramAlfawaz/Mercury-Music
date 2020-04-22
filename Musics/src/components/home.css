@@ -57,7 +57,7 @@ html, body {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.4))), url(http://static.stereogum.com/blogs.dir/2/files/2011/12/Adele-21.jpg) center bottom;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(http://static.stereogum.com/blogs.dir/2/files/2011/12/Adele-21.jpg) center bottom;
     background-size: cover;
-    background-image: url('https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-image: url('https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
 
     
   }
