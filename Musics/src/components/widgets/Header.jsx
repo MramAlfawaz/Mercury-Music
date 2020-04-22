@@ -5,11 +5,11 @@ const Header = (props) => {
   console.log("Header", props);
   return (
  <div Style={"height:600"}>
-    <Nav className="navbar navbar-dark mb-4" Style={"background: #08182d"} >
+    <Nav className="navbar navbar-dark mb-4" Style={"background: #DD17F" } >
       <Link className="navbar-brand" to="/">
-      <div class="card alt" className="ml-0">
-        <div class="toggle" className="ml-0" ><i class="music" class="fa fa-music" aria-hidden="true"> </i> Mercury </div>
-      </div>
+      <div>
+                    <img width="100" height="100" src="https://s4.aconvert.com/convert/p3r68-cdx67/avz3e-bhvbv.png" alt="profile-photo"/>
+                </div>
        
       </Link>
      

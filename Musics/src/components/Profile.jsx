@@ -16,11 +16,11 @@ export default class Profile extends Component {
             </div>
             <div class="half">
                 <div class="profile">
-                    <img src="https://s4.aconvert.com/convert/p3r68-cdx67/avz3e-bhvbv.png" alt="profile-photo"/>
+                    <img src="https://s4.aconvert.com/convert/p3r68-cdx67/adx57-l0ejc.png" alt="profile-photo"/>
                 </div>
                 <div class="user-info">
-                    <h4 class="h4p">{user.firstName} {user.lastName}</h4>
-                    <p class="pp"><small>{user.city}, {user.country}</small></p>
+                    <h1 class="h4p">{user.firstName} {user.lastName}</h1>
+                    <p  class="pp">{user.city}, {user.country}</p>
                 </div>
             </div>
             <div class="bottom">

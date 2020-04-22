@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
  .pp , .h4p{
-    padding: 0px;
-    margin: 7px 0;
+    margin-top: 10px;
+    font-family: monospace;
 }  
 
 .h1pf{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 50px;
+    font-family: monospace;
 }
 .wrapper{
     display: flex;
@@ -30,10 +31,11 @@
     position: absolute;
     text-shadow: 1px 2px 3px #666;
     transform: translateY(-10px);
+    background-image: url('https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+    background-size: cover;
+
 }
-.cardp .h4p,.pp {
-    font-size: 20px;
-}
+
 .cardp-return {
     animation: cardpAnimationReturn 0.4s forwards ease-in-out;
 }
