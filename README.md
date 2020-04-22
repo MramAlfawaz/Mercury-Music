@@ -6,10 +6,10 @@ Music player and server for  Shows audio files stored
 categorized by artists and albums. and depending on the browser, many other audio formats too. Supports shuffle play and playlists. 
  # Prototype
 
-![Signup Page](Musics/src/components/images/Signup.png)
-![Signin Page](Musics/src/components/images/signin.png)
-![Home Page](Musics/src/components/images/ALBUMS.png)
-![Create Book Page](Musics/src/components/images/PROFILE.png)
+![SignupPage](readme/Signup.png)
+![SigninPage](readme/signin.png)
+![ALBUMS](readme/ALBUMS.png)
+![PROFILE](readme/PROFILE.png)
 
 
  # Software Requirements
