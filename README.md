@@ -30,7 +30,7 @@ categorized by artists and albums. and depending on the browser, many other audi
 - User can be able  to search for specific music 
 - User can be able to add music for favorite page
 
-#Future work
+# Future work
 - Allow users to build own playlists.
 - More content classification 
 
