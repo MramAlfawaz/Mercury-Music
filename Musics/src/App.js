@@ -51,6 +51,7 @@ export default class App extends Component {
           />
           <Route path="/signup" component={Signup} />
         </Switch>
+       
       </div>
     );
   }

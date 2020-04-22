@@ -111,6 +111,18 @@ export default class Routes extends Component {
             </>
           )}
         </Switch>
+        <footer class="footerq">
+  <div class="copyright">
+    <p>&copy 2020 - MERCURY TEAM</p>
+  </div>
+  <div class="social">
+    <a href="#" class="support">Contact Us</a>
+    <a href="https://git.generalassemb.ly/Maram-Alfawaz/Mercury-Music" class="tweet">Github</a>
+    <a href="https://www.linkedin.com/in/maram-alfawaz" class="linked">in</a>
+    <a href="https://www.linkedin.com/in/bashayr-alhasani/" class="linked">in</a>
+
+  </div>
+</footer>
       </div>
     );
   }

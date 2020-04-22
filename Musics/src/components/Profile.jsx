@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FavoritesAlbums from "./FavoritesAlbums";
 import "./profile.css";
-import maram from './images/logo.png'
+import maram from './images/ebere.png'
 export default class Profile extends Component {
 
   render() {

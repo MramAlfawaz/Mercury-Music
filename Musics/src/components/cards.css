@@ -27,7 +27,7 @@
       align-content: center;
     border-radius: 6px;
     background: #fff;
-    box-shadow: 0px 0px 10px #DD417F;
+    box-shadow: 0px 0px 10px #5e5d5d;
     overflow: hidden;
     position: relative;
     width: 350px;
@@ -50,8 +50,8 @@
     position: absolute;
     width: 100%;
     z-index: 1;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(221, 65, 127, 0)), to(#DD417F));
-    background: linear-gradient(rgba(221, 65, 127, 0), #DD417F);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(221, 65, 127, 0)), to(#ed2553));
+    background: linear-gradient(rgba(221, 65, 127, 0), #d84064);
     /* #DD417F */
   }
   .music-card > .wave {
@@ -63,9 +63,9 @@
     margin-left: -70%;
     margin-top: -130%;
     border-radius: 40%;
-    background: radial-gradient(#B01DE8, #DD417F);
+    background: radial-gradient(rgb(134, 90, 151), #ed2553);
      /* F44336 */
-    /* background: radial-gradient(rgb(34, 15, 0), rgb(97, 87, 86)); */
+    /* background: radial-gradient(rgb(34, 15, 0), rgb(9, 8, 73)); */
     -webkit-animation: spin 3000ms infinite linear;
             animation: spin 3000ms infinite linear;
   }

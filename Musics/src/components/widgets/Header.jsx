@@ -6,7 +6,7 @@ const Header = (props) => {
   console.log("Header", props);
   return (
  <div Style={"height:600"}>
-    <Nav className="navbar navbar-dark mb-4" Style={"background: #DD17F" } >
+    <Nav className="navbar navbar-dark mb-4" Style={"background: #08192D" } >
       <Link className="navbar-brand" to="/">
       <div>
       <i class='fas fa-headphones' Style={'font-size:36px'}></i>
