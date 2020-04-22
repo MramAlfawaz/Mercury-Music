@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -14,5 +15,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/user", require("./route/user"));
-
-app.listen(8001, () => console.log("server run on 8001"));
+const PORT = process.env.PORT;
+//serves all our static files from the build directory.
+app.use(express.static(path.join(__dirname, "build")));
+// After all routes
+// This code essentially serves the index.html file on any unknown routes.
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+app.listen(PORT);
