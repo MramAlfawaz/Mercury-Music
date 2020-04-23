@@ -24,7 +24,7 @@ export default class SearchBar extends Component {
             <div className="search mb-2">
                 <form onSubmit={(e) => this.submitSearch(e)}>
                     <div className="row">
-                        <div className="col-md-10">
+                        <div className="col-md-10 ml-8">
                             <div className="form-group">
                                 <input type="text" 
                                 placeholder="Search for your favorite tracks" 

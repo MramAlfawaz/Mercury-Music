@@ -8,7 +8,7 @@ categorized by artists and albums. and depending on the browser, many other audi
  # Prototype
 
 ![SignupPage](readme/Signup.png)
-![SigninPage](readme/signin.png)
+![SigninPage](readme/Signin.png)
 ![ALBUMS](readme/ALBUMS.png)
 ![PROFILE](readme/PROFILE.png)
 
@@ -33,6 +33,8 @@ categorized by artists and albums. and depending on the browser, many other audi
 # Future work
 - Allow users to build own playlists.
 - More content classification 
+- Admin page
+- Allow users to upload musics 
 
 
 
