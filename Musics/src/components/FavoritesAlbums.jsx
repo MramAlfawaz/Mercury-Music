@@ -63,7 +63,7 @@ export default class FavoritesAlbums extends Component {
                             href="#"
                             className="link"
                           >
-                            <i className="fas fa-grin-stars text-dark" aria-hidden="true"></i>
+                            <i className="fa fa-times text-dark" aria-hidden="true"></i>
         
                           </a>
                         </div>
