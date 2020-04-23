@@ -66,19 +66,20 @@
     background: radial-gradient(rgb(134, 90, 151), #ed2553);
      /* F44336 */
     /* background: radial-gradient(rgb(34, 15, 0), rgb(9, 8, 73)); */
-    -webkit-animation: spin 3000ms infinite linear;
-            animation: spin 3000ms infinite linear;
+    -webkit-animation:  3000ms infinite linear;
+            animation:  3000ms infinite linear;
   }
   .music-card > .wave:nth-child(2) {
     top: 10px;
-    -webkit-animation: spin 4000ms infinite linear;
-            animation: spin 4000ms infinite linear;
+    -webkit-animation:  4000ms infinite linear;
+            animation:  4000ms infinite linear;
   }
 
   .music-card > .wave:nth-child(3) {
     top: 10px;
-    -webkit-animation: spin 5000ms infinite linear;
-            animation: spin 5000ms infinite linear;
+    -webkit-animation:  5000ms infinite linear;
+            animation:  5000ms infinite linear;
+            /* spin */
   }
   
   .music-card > .info {
